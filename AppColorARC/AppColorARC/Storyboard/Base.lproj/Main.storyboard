@@ -107,7 +107,7 @@
                                                                     <constraint firstAttribute="width" secondItem="WUM-tN-uJH" secondAttribute="height" multiplier="131:17" id="j47-hh-dau"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <action selector="hsRedAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="cv9-h7-cC5"/>
+                                                                    <action selector="hsRedAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="gA5-rj-XIG"/>
                                                                 </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-ey-BlL">
@@ -179,7 +179,7 @@
                                                                     <constraint firstAttribute="width" secondItem="f19-73-BLm" secondAttribute="height" multiplier="131:17" id="qmM-gF-McI"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <action selector="tfBlueAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="ojG-lz-vVc"/>
+                                                                    <action selector="hsBlueAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="NoD-iQ-pnY"/>
                                                                 </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqc-1j-J1B">
@@ -291,9 +291,10 @@
                     <connections>
                         <outlet property="colorView" destination="M2Z-Dn-X7P" id="yMh-lX-qkF"/>
                         <outlet property="doneBtn" destination="GdL-bg-P9g" id="IIp-1R-mC4"/>
-                        <outlet property="hsBlue" destination="f19-73-BLm" id="EZH-DR-eYC"/>
+                        <outlet property="hsBlue" destination="f19-73-BLm" id="pNb-D9-IWH"/>
                         <outlet property="hsGreen" destination="3RB-f9-GNo" id="dH9-cX-GD2"/>
                         <outlet property="hsOpacity" destination="Fcw-dC-PSS" id="go9-zj-jOa"/>
+                        <outlet property="hsRed" destination="WUM-tN-uJH" id="Ngx-Lz-iAE"/>
                         <outlet property="tfBlue" destination="hqc-1j-J1B" id="CYp-ja-r9E"/>
                         <outlet property="tfGreen" destination="1yd-FC-6PG" id="UoE-em-roa"/>
                         <outlet property="tfHerColor" destination="BEH-gf-DMS" id="eTG-Ke-og4"/>
