@@ -13,6 +13,8 @@
 		BC562CD62AA85DC8007C7EAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC562CD42AA85DC8007C7EAC /* Main.storyboard */; };
 		BC562CD82AA85DC8007C7EAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC562CD72AA85DC8007C7EAC /* Assets.xcassets */; };
 		BC562CDB2AA85DC8007C7EAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC562CD92AA85DC8007C7EAC /* LaunchScreen.storyboard */; };
+		BCAAA6552AA88A9500A2C323 /* FIrstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA6542AA88A9500A2C323 /* FIrstViewController.swift */; };
+		BCAAA6572AA88AC300A2C323 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA6562AA88AC300A2C323 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BC562CD72AA85DC8007C7EAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC562CDA2AA85DC8007C7EAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC562CDC2AA85DC8007C7EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCAAA6542AA88A9500A2C323 /* FIrstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrstViewController.swift; sourceTree = "<group>"; };
+		BCAAA6562AA88AC300A2C323 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				BC562CD22AA85DC8007C7EAC /* ViewController.swift */,
+				BCAAA6542AA88A9500A2C323 /* FIrstViewController.swift */,
+				BCAAA6562AA88AC300A2C323 /* SecondViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				BC562CD32AA85DC8007C7EAC /* ViewController.swift in Sources */,
 				BC562CCF2AA85DC8007C7EAC /* AppDelegate.swift in Sources */,
 				BC562CD12AA85DC8007C7EAC /* SceneDelegate.swift in Sources */,
+				BCAAA6572AA88AC300A2C323 /* SecondViewController.swift in Sources */,
+				BCAAA6552AA88A9500A2C323 /* FIrstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
