@@ -16,21 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ND-gY-pMo">
-                                <rect key="frame" x="257" y="123" width="106" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ChangeBG"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-ak-CuE" userLabel="ColorView">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ND-gY-pMo">
+                                        <rect key="frame" x="265" y="8" width="106" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ChangeBG"/>
+                                        <connections>
+                                            <action selector="ChangeBGAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KX-vS-MXj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2ND-gY-pMo" firstAttribute="top" secondItem="dc9-ak-CuE" secondAttribute="topMargin" id="1He-kp-ukk"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ND-gY-pMo" secondAttribute="trailing" constant="22" id="iXE-Of-9iG"/>
+                                    <constraint firstItem="2ND-gY-pMo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dc9-ak-CuE" secondAttribute="leading" constant="20" symbolic="YES" id="ogN-40-XJg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2ND-gY-pMo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9nK-kq-ndL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2ND-gY-pMo" secondAttribute="trailing" id="ZMU-0f-i3Q"/>
-                            <constraint firstItem="2ND-gY-pMo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="257" id="u5Z-lc-44p"/>
+                            <constraint firstItem="dc9-ak-CuE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2Pm-lk-4M8"/>
+                            <constraint firstItem="dc9-ak-CuE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WpF-ba-e0t"/>
+                            <constraint firstItem="dc9-ak-CuE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y7p-Ju-n3L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dc9-ak-CuE" secondAttribute="bottom" id="cVZ-vK-QRj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dc9-ak-CuE" secondAttribute="trailing" id="ceR-ep-z0b"/>
+                            <constraint firstItem="dc9-ak-CuE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="rce-7A-eXG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zrJ-hE-osn"/>
+                    <connections>
+                        <outlet property="Button" destination="2ND-gY-pMo" id="jZp-jI-jQk"/>
+                        <outlet property="ColorView" destination="dc9-ak-CuE" id="OTz-Zc-Cny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +106,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="WUM-tN-uJH" secondAttribute="height" multiplier="131:17" id="j47-hh-dau"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="hsRedAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="cv9-h7-cC5"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-ey-BlL">
                                                                 <rect key="frame" x="298" y="0.0" width="55" height="31.333333333333332"/>
@@ -93,6 +117,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="tfRedAction:" destination="8F8-QO-TJe" eventType="editingDidEnd" id="lRh-04-5x9"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -115,6 +142,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="3RB-f9-GNo" secondAttribute="height" multiplier="131:17" id="Kfd-kK-tMF"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="hsGreenAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="pqf-Pd-eDd"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yd-FC-6PG">
                                                                 <rect key="frame" x="298" y="0.0" width="55" height="31.333333333333332"/>
@@ -123,6 +153,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="tfGreenAction:" destination="8F8-QO-TJe" eventType="editingDidEnd" id="7nq-hi-VBn"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -145,6 +178,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="f19-73-BLm" secondAttribute="height" multiplier="131:17" id="qmM-gF-McI"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="tfBlueAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="ojG-lz-vVc"/>
+                                                                </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqc-1j-J1B">
                                                                 <rect key="frame" x="298" y="0.0" width="55" height="31"/>
@@ -153,6 +189,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="tfBlueAction:" destination="8F8-QO-TJe" eventType="editingDidEnd" id="Gdl-aR-aIt"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -179,6 +218,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="colorTFAction:" destination="8F8-QO-TJe" eventType="editingDidEnd" id="Neg-8u-13E"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -199,6 +241,9 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Fcw-dC-PSS" secondAttribute="height" multiplier="131:17" id="myC-30-qPS"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="opacityHSAction:" destination="8F8-QO-TJe" eventType="valueChanged" id="EzG-h9-K2p"/>
+                                                        </connections>
                                                     </slider>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-rd-1lf">
                                                         <rect key="frame" x="298" y="0.0" width="55" height="31.333333333333332"/>
@@ -207,6 +252,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="tfActionOpacity:" destination="8F8-QO-TJe" eventType="editingDidEnd" id="teY-8y-JIP"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -223,6 +271,9 @@
                                         <rect key="frame" x="0.0" y="566.33333333333337" width="353" height="146.66666666666663"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonAction:" destination="8F8-QO-TJe" eventType="touchUpInside" id="8Xs-qx-0uI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -237,6 +288,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nth-ua-BSY"/>
+                    <connections>
+                        <outlet property="colorView" destination="M2Z-Dn-X7P" id="yMh-lX-qkF"/>
+                        <outlet property="doneBtn" destination="GdL-bg-P9g" id="IIp-1R-mC4"/>
+                        <outlet property="hsBlue" destination="f19-73-BLm" id="EZH-DR-eYC"/>
+                        <outlet property="hsGreen" destination="3RB-f9-GNo" id="dH9-cX-GD2"/>
+                        <outlet property="hsOpacity" destination="Fcw-dC-PSS" id="go9-zj-jOa"/>
+                        <outlet property="tfBlue" destination="hqc-1j-J1B" id="CYp-ja-r9E"/>
+                        <outlet property="tfGreen" destination="1yd-FC-6PG" id="UoE-em-roa"/>
+                        <outlet property="tfHerColor" destination="BEH-gf-DMS" id="eTG-Ke-og4"/>
+                        <outlet property="tfOpacity" destination="K4o-rd-1lf" id="XjG-7L-hdZ"/>
+                        <outlet property="tfRed" destination="Rhv-ey-BlL" id="Xe9-T2-YlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6q-Ih-kSk" sceneMemberID="firstResponder"/>
             </objects>
