@@ -35,9 +35,12 @@ class SecondViewController: UIViewController {
     var text: String?
     var delegate: DataUpdateProtocol?
     
+    
     @IBAction func hsRedAction(_ sender: UISlider) {
         let value = Int(sender.value)
         tfRed.text = "\(value)"
+        colorVIew()
+        
     }
     
     @IBAction func tfRedAction(_ sender: UITextField) {
@@ -47,6 +50,7 @@ class SecondViewController: UIViewController {
     @IBAction func hsGreenAction(_ sender: UISlider) {
         let value = Int(sender.value)
         tfGreen.text = "\(value)"
+        colorVIew()
     }
     
     @IBAction func tfGreenAction(_ sender: UITextField) {
@@ -56,6 +60,7 @@ class SecondViewController: UIViewController {
     @IBAction func hsBlueAction(_ sender: UISlider) {
         let value = Int(sender.value)
         tfBlue.text = "\(value)"
+        colorVIew()
     }
     
     
@@ -81,6 +86,10 @@ class SecondViewController: UIViewController {
         
     }
     
+    func colorVIew() {
+        self.colorView.backgroundColor = UIColor(red: CGFloat(hsRed.value)/255, green: CGFloat(hsGreen.value)/255, blue: CGFloat(hsBlue.value)/255, alpha: 1)
+    }
+
     func setupUI() {
         hsRed.minimumValue = 0
         hsRed.maximumValue = 250
@@ -92,15 +101,23 @@ class SecondViewController: UIViewController {
         hsBlue.maximumValue = 250
         
         hsOpacity.minimumValue = 0
-        hsOpacity.maximumValue = 250
+        hsOpacity.maximumValue = 100
+        
+        colorView.layer.cornerRadius = 12
     }
     
-    
-    
-    
-    
+   
     
     
 }
 
 
+//@objc func sliderValueDidChange(sender: UISlider) {
+//    let sliderPercentage = sender.value / sender.maximumValue
+//    let invertedPercentage = 1 - sliderPercentage
+//    let hue = CGFloat(invertedPercentage * 120 / 360)
+//
+//    let trackColor = UIColor(hue: hue, saturation: 0.95, brightness: 0.87, alpha: 1)
+//    brokeSlider.minimumTrackTintColor = trackColor
+
+//self.colorView.backgroundColor = UIColor(red: CGFloat(hsRed.value)/255, green: CGFloat(hsGreen.value)/255, blue: CGFloat(hsBlue.value)/255, alpha: 1)
