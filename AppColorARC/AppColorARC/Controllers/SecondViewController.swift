@@ -27,7 +27,8 @@ class SecondViewController: UIViewController {
     // MARK: - IBOutlet DONEBUTTON
     @IBOutlet private weak var doneBtn: UIButton!
     
-    
+    var text: String?
+    var delegate: DataUpdateProtocol?
     
     @IBAction func hsRedAction(_ sender: UISlider) {
         
