@@ -56,15 +56,39 @@
 		BC562CCD2AA85DC8007C7EAC /* AppColorARC */ = {
 			isa = PBXGroup;
 			children = (
-				BC562CCE2AA85DC8007C7EAC /* AppDelegate.swift */,
-				BC562CD02AA85DC8007C7EAC /* SceneDelegate.swift */,
-				BC562CD22AA85DC8007C7EAC /* ViewController.swift */,
-				BC562CD42AA85DC8007C7EAC /* Main.storyboard */,
+				BC562CE42AA85ECD007C7EAC /* Controllers */,
+				BC562CE32AA85EB9007C7EAC /* Storyboard */,
 				BC562CD72AA85DC8007C7EAC /* Assets.xcassets */,
-				BC562CD92AA85DC8007C7EAC /* LaunchScreen.storyboard */,
 				BC562CDC2AA85DC8007C7EAC /* Info.plist */,
+				BC562CE22AA85E66007C7EAC /* Delegate */,
 			);
 			path = AppColorARC;
+			sourceTree = "<group>";
+		};
+		BC562CE22AA85E66007C7EAC /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BC562CD02AA85DC8007C7EAC /* SceneDelegate.swift */,
+				BC562CCE2AA85DC8007C7EAC /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BC562CE32AA85EB9007C7EAC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BC562CD42AA85DC8007C7EAC /* Main.storyboard */,
+				BC562CD92AA85DC8007C7EAC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BC562CE42AA85ECD007C7EAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC562CD22AA85DC8007C7EAC /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
