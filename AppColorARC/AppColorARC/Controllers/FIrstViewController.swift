@@ -1,16 +1,26 @@
 import UIKit
 
 protocol DataUpdateProtocol {
-    func onDataUpdate(data: String)
+    func onDataUpdate(color: UIColor, transparency: CGFloat)
 }
 
 class FIrstViewController: UIViewController {
     
-    @IBOutlet weak var ColorView: UIView!
-    @IBOutlet weak var Button: UIButton!
     
+    @IBOutlet weak var ColorView: UIView! { didSet {
+        ColorView.backgroundColor = color
+        if let transparency = transparency {
+            ColorView.alpha = transparency
+        }
+    }
+    }
+    @IBOutlet weak var changedBackground: UIButton!
+    
+    var color: UIColor?
+    var transparency: CGFloat?
     
     @IBAction func ChangeBGAction() {
+       
         let stor = UIStoryboard(name: "Main", bundle: nil)
         guard let secondViewController = stor.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
         
@@ -20,7 +30,9 @@ class FIrstViewController: UIViewController {
 }
 
 extension FIrstViewController: DataUpdateProtocol {
-    func onDataUpdate(data: String) {
-        //
+    func onDataUpdate(color: UIColor, transparency: CGFloat) {
+        ColorView.backgroundColor = color
+        ColorView.alpha = transparency
     }
 }
+

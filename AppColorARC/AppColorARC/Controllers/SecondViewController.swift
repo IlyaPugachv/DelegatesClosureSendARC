@@ -34,7 +34,7 @@ class SecondViewController: UIViewController {
        
     }
     
-        var text: String?
+       
         var delegate: DataUpdateProtocol?
         
         
@@ -99,7 +99,19 @@ class SecondViewController: UIViewController {
             
         }
         
-        @IBAction func doneButtonAction(_ sender: UIButton) {
+    @IBAction func doneButtonAction(_ sender: UIButton) {
+        let stor = UIStoryboard(name: "Main", bundle: nil)
+        guard let FIrstViewController = stor.instantiateViewController(withIdentifier: "FIrstViewController") as? FIrstViewController else { return }
+        FIrstViewController.color = colorView.backgroundColor
+        FIrstViewController.transparency = colorView.alpha
+        
+        self.navigationController?.pushViewController(FIrstViewController, animated: true)
+            
+            
+            
+            
+            
+
             
         }
         

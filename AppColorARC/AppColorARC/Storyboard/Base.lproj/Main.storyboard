@@ -11,46 +11,45 @@
         <!--Irst View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FIrstViewController" customModule="AppColorARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FIrstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FIrstViewController" customModule="AppColorARC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-ak-CuE" userLabel="ColorView">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-Cl-4o8">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ND-gY-pMo">
-                                        <rect key="frame" x="265" y="8" width="106" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNd-MD-MAh">
+                                        <rect key="frame" x="250" y="100" width="103" height="35"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="ChangeBG"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="changeBC"/>
                                         <connections>
-                                            <action selector="ChangeBGAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KX-vS-MXj"/>
+                                            <action selector="ChangeBGAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="oEf-jX-74h"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="2ND-gY-pMo" firstAttribute="top" secondItem="dc9-ak-CuE" secondAttribute="topMargin" id="1He-kp-ukk"/>
-                                    <constraint firstAttribute="trailing" secondItem="2ND-gY-pMo" secondAttribute="trailing" constant="22" id="iXE-Of-9iG"/>
-                                    <constraint firstItem="2ND-gY-pMo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dc9-ak-CuE" secondAttribute="leading" constant="20" symbolic="YES" id="ogN-40-XJg"/>
+                                    <constraint firstItem="UNd-MD-MAh" firstAttribute="top" secondItem="dPA-Cl-4o8" secondAttribute="top" constant="100" id="3tH-9O-VKr"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UNd-MD-MAh" secondAttribute="trailing" constant="20" symbolic="YES" id="Wgj-zH-3Z6"/>
+                                    <constraint firstItem="UNd-MD-MAh" firstAttribute="leading" secondItem="dPA-Cl-4o8" secondAttribute="leading" constant="250" id="a8r-vr-26d"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dc9-ak-CuE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2Pm-lk-4M8"/>
-                            <constraint firstItem="dc9-ak-CuE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WpF-ba-e0t"/>
-                            <constraint firstItem="dc9-ak-CuE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y7p-Ju-n3L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dc9-ak-CuE" secondAttribute="bottom" id="cVZ-vK-QRj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dc9-ak-CuE" secondAttribute="trailing" id="ceR-ep-z0b"/>
-                            <constraint firstItem="dc9-ak-CuE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="rce-7A-eXG"/>
+                            <constraint firstAttribute="trailing" secondItem="dPA-Cl-4o8" secondAttribute="trailing" id="FKf-YC-eUu"/>
+                            <constraint firstItem="dPA-Cl-4o8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="asE-8A-Fwx"/>
+                            <constraint firstItem="dPA-Cl-4o8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h5B-bx-uqN"/>
+                            <constraint firstAttribute="bottom" secondItem="dPA-Cl-4o8" secondAttribute="bottom" id="ucY-a7-dHp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zrJ-hE-osn"/>
                     <connections>
-                        <outlet property="Button" destination="2ND-gY-pMo" id="jZp-jI-jQk"/>
-                        <outlet property="ColorView" destination="dc9-ak-CuE" id="OTz-Zc-Cny"/>
+                        <outlet property="ColorView" destination="dPA-Cl-4o8" id="ZvZ-zB-SQB"/>
+                        <outlet property="changedBackground" destination="UNd-MD-MAh" id="lu6-Fg-um8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
