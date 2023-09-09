@@ -18,6 +18,7 @@ class FIrstViewController: UIViewController {
     
     var color: UIColor?
     var transparency: CGFloat?
+    var handler: (() -> ())?
     
     @IBAction func ChangeBGAction() {
        

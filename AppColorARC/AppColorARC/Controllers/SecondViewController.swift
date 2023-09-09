@@ -26,7 +26,8 @@ class SecondViewController: UIViewController {
     @IBOutlet private weak var colorView: UIView!
     
     // MARK: - IBOutlet DONEBUTTON
-    @IBOutlet private weak var doneBtn: UIButton!
+    @IBOutlet private weak var delegateBtn: UIButton!
+    @IBOutlet private weak var closureBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,23 +100,34 @@ class SecondViewController: UIViewController {
             
         }
         
-    @IBAction func doneButtonAction(_ sender: UIButton) {
+    @IBAction func delegateButtonAction(_ sender: UIButton) {
         let stor = UIStoryboard(name: "Main", bundle: nil)
         guard let FIrstViewController = stor.instantiateViewController(withIdentifier: "FIrstViewController") as? FIrstViewController else { return }
         FIrstViewController.color = colorView.backgroundColor
         FIrstViewController.transparency = colorView.alpha
         
         self.navigationController?.pushViewController(FIrstViewController, animated: true)
+        }
+        
+    @IBAction func closureButtonAction(_ sender: UIButton) {
+        let stor = UIStoryboard(name: "Main", bundle: nil)
+        guard let FIrstViewController = stor.instantiateViewController(withIdentifier: "FIrstViewController") as? FIrstViewController else { return }
+        FIrstViewController.color = colorView.backgroundColor
+        FIrstViewController.transparency = colorView.alpha
+        
+        FIrstViewController.handler = { [unowned self]  in
+            self.colorView.backgroundColor = FIrstViewController.ColorView.backgroundColor
+            self.colorView.alpha = FIrstViewController.changedBackground.alpha
             
-            
-            
-            
-            
-
             
         }
         
-        
+    }
+    
+    
+    
+    
+    
         func colorVIew() {
             self.colorView.backgroundColor = UIColor(red: CGFloat(hsRed.value)/255, green: CGFloat(hsGreen.value)/255, blue: CGFloat(hsBlue.value)/255, alpha: 1)
          
