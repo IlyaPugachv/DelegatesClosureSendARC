@@ -4,11 +4,11 @@ protocol DataUpdateProtocol {
     func onDataUpdate(color: UIColor, transparency: CGFloat)
 }
 
-class FIrstViewController: UIViewController {
+final class FIrstViewController: UIViewController {
     
-    @IBOutlet weak var ColorView: UIView! { didSet {
-        ColorView.backgroundColor = color
-        if let transparency = transparency { ColorView.alpha = transparency } } }
+    @IBOutlet weak var colorView: UIView! { didSet {
+        colorView.backgroundColor = color
+        if let transparency = transparency { colorView.alpha = transparency } } }
     
     @IBOutlet weak var changedBackground: UIButton!
     
@@ -17,8 +17,8 @@ class FIrstViewController: UIViewController {
         setupUI()
     }
     
-    var color: UIColor?
-    var transparency: CGFloat?
+    private var color: UIColor?
+    private var transparency: CGFloat?
     var handler: (() -> ())?
     var delegate: DataUpdateProtocol?
     
@@ -38,8 +38,8 @@ class FIrstViewController: UIViewController {
 
 extension FIrstViewController: DataUpdateProtocol {
     func onDataUpdate(color: UIColor, transparency: CGFloat) {
-        ColorView.backgroundColor = color
-        ColorView.alpha = transparency
+        colorView.backgroundColor = color
+        colorView.alpha = transparency
     }
 }
 

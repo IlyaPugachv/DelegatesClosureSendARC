@@ -85,7 +85,7 @@ class SecondViewController: UIViewController {
         FIrstViewController.transparency = colorView.alpha
         
         FIrstViewController.handler = { [unowned self]  in
-            self.colorView.backgroundColor = FIrstViewController.ColorView.backgroundColor
+            self.colorView.backgroundColor = FIrstViewController.colorView.backgroundColor
             self.colorView.alpha = FIrstViewController.changedBackground.alpha
         }
     }

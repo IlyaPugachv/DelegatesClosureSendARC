@@ -48,8 +48,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="zrJ-hE-osn"/>
                     <connections>
-                        <outlet property="ColorView" destination="dPA-Cl-4o8" id="ZvZ-zB-SQB"/>
                         <outlet property="changedBackground" destination="UNd-MD-MAh" id="lu6-Fg-um8"/>
+                        <outlet property="colorView" destination="dPA-Cl-4o8" id="ZvZ-zB-SQB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
